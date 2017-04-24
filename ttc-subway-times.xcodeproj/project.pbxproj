@@ -1,0 +1,530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CEC600B1EAE40280015A585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC600A1EAE40280015A585 /* AppDelegate.swift */; };
+		0CEC600D1EAE40280015A585 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC600C1EAE40280015A585 /* ViewController.swift */; };
+		0CEC60101EAE40280015A585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC600E1EAE40280015A585 /* Main.storyboard */; };
+		0CEC60121EAE40280015A585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC60111EAE40280015A585 /* Assets.xcassets */; };
+		0CEC60151EAE40280015A585 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC60131EAE40280015A585 /* LaunchScreen.storyboard */; };
+		0CEC60201EAE40280015A585 /* ttc_subway_timesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC601F1EAE40280015A585 /* ttc_subway_timesTests.swift */; };
+		0CEC602B1EAE40280015A585 /* ttc_subway_timesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC602A1EAE40280015A585 /* ttc_subway_timesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0CEC601C1EAE40280015A585 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CEC5FFF1EAE40280015A585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CEC60061EAE40280015A585;
+			remoteInfo = "ttc-subway-times";
+		};
+		0CEC60271EAE40280015A585 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0CEC5FFF1EAE40280015A585 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0CEC60061EAE40280015A585;
+			remoteInfo = "ttc-subway-times";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0CEC60071EAE40280015A585 /* ttc-subway-times.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ttc-subway-times.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CEC600A1EAE40280015A585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0CEC600C1EAE40280015A585 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0CEC600F1EAE40280015A585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0CEC60111EAE40280015A585 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0CEC60141EAE40280015A585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0CEC60161EAE40280015A585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CEC601B1EAE40280015A585 /* ttc-subway-timesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ttc-subway-timesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CEC601F1EAE40280015A585 /* ttc_subway_timesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ttc_subway_timesTests.swift; sourceTree = "<group>"; };
+		0CEC60211EAE40280015A585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CEC60261EAE40280015A585 /* ttc-subway-timesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ttc-subway-timesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CEC602A1EAE40280015A585 /* ttc_subway_timesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ttc_subway_timesUITests.swift; sourceTree = "<group>"; };
+		0CEC602C1EAE40280015A585 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0CEC60041EAE40280015A585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CEC60181EAE40280015A585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CEC60231EAE40280015A585 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CEC5FFE1EAE40280015A585 = {
+			isa = PBXGroup;
+			children = (
+				0CEC60091EAE40280015A585 /* ttc-subway-times */,
+				0CEC601E1EAE40280015A585 /* ttc-subway-timesTests */,
+				0CEC60291EAE40280015A585 /* ttc-subway-timesUITests */,
+				0CEC60081EAE40280015A585 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0CEC60081EAE40280015A585 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CEC60071EAE40280015A585 /* ttc-subway-times.app */,
+				0CEC601B1EAE40280015A585 /* ttc-subway-timesTests.xctest */,
+				0CEC60261EAE40280015A585 /* ttc-subway-timesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CEC60091EAE40280015A585 /* ttc-subway-times */ = {
+			isa = PBXGroup;
+			children = (
+				0CEC600A1EAE40280015A585 /* AppDelegate.swift */,
+				0CEC600C1EAE40280015A585 /* ViewController.swift */,
+				0CEC600E1EAE40280015A585 /* Main.storyboard */,
+				0CEC60111EAE40280015A585 /* Assets.xcassets */,
+				0CEC60131EAE40280015A585 /* LaunchScreen.storyboard */,
+				0CEC60161EAE40280015A585 /* Info.plist */,
+			);
+			path = "ttc-subway-times";
+			sourceTree = "<group>";
+		};
+		0CEC601E1EAE40280015A585 /* ttc-subway-timesTests */ = {
+			isa = PBXGroup;
+			children = (
+				0CEC601F1EAE40280015A585 /* ttc_subway_timesTests.swift */,
+				0CEC60211EAE40280015A585 /* Info.plist */,
+			);
+			path = "ttc-subway-timesTests";
+			sourceTree = "<group>";
+		};
+		0CEC60291EAE40280015A585 /* ttc-subway-timesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0CEC602A1EAE40280015A585 /* ttc_subway_timesUITests.swift */,
+				0CEC602C1EAE40280015A585 /* Info.plist */,
+			);
+			path = "ttc-subway-timesUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0CEC60061EAE40280015A585 /* ttc-subway-times */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CEC602F1EAE40280015A585 /* Build configuration list for PBXNativeTarget "ttc-subway-times" */;
+			buildPhases = (
+				0CEC60031EAE40280015A585 /* Sources */,
+				0CEC60041EAE40280015A585 /* Frameworks */,
+				0CEC60051EAE40280015A585 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ttc-subway-times";
+			productName = "ttc-subway-times";
+			productReference = 0CEC60071EAE40280015A585 /* ttc-subway-times.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0CEC601A1EAE40280015A585 /* ttc-subway-timesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CEC60321EAE40280015A585 /* Build configuration list for PBXNativeTarget "ttc-subway-timesTests" */;
+			buildPhases = (
+				0CEC60171EAE40280015A585 /* Sources */,
+				0CEC60181EAE40280015A585 /* Frameworks */,
+				0CEC60191EAE40280015A585 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CEC601D1EAE40280015A585 /* PBXTargetDependency */,
+			);
+			name = "ttc-subway-timesTests";
+			productName = "ttc-subway-timesTests";
+			productReference = 0CEC601B1EAE40280015A585 /* ttc-subway-timesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0CEC60251EAE40280015A585 /* ttc-subway-timesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CEC60351EAE40280015A585 /* Build configuration list for PBXNativeTarget "ttc-subway-timesUITests" */;
+			buildPhases = (
+				0CEC60221EAE40280015A585 /* Sources */,
+				0CEC60231EAE40280015A585 /* Frameworks */,
+				0CEC60241EAE40280015A585 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CEC60281EAE40280015A585 /* PBXTargetDependency */,
+			);
+			name = "ttc-subway-timesUITests";
+			productName = "ttc-subway-timesUITests";
+			productReference = 0CEC60261EAE40280015A585 /* ttc-subway-timesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0CEC5FFF1EAE40280015A585 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Alfred Choi";
+				TargetAttributes = {
+					0CEC60061EAE40280015A585 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+					};
+					0CEC601A1EAE40280015A585 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0CEC60061EAE40280015A585;
+					};
+					0CEC60251EAE40280015A585 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0CEC60061EAE40280015A585;
+					};
+				};
+			};
+			buildConfigurationList = 0CEC60021EAE40280015A585 /* Build configuration list for PBXProject "ttc-subway-times" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0CEC5FFE1EAE40280015A585;
+			productRefGroup = 0CEC60081EAE40280015A585 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0CEC60061EAE40280015A585 /* ttc-subway-times */,
+				0CEC601A1EAE40280015A585 /* ttc-subway-timesTests */,
+				0CEC60251EAE40280015A585 /* ttc-subway-timesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CEC60051EAE40280015A585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CEC60151EAE40280015A585 /* LaunchScreen.storyboard in Resources */,
+				0CEC60121EAE40280015A585 /* Assets.xcassets in Resources */,
+				0CEC60101EAE40280015A585 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CEC60191EAE40280015A585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CEC60241EAE40280015A585 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CEC60031EAE40280015A585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CEC600D1EAE40280015A585 /* ViewController.swift in Sources */,
+				0CEC600B1EAE40280015A585 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CEC60171EAE40280015A585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CEC60201EAE40280015A585 /* ttc_subway_timesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CEC60221EAE40280015A585 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CEC602B1EAE40280015A585 /* ttc_subway_timesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CEC601D1EAE40280015A585 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CEC60061EAE40280015A585 /* ttc-subway-times */;
+			targetProxy = 0CEC601C1EAE40280015A585 /* PBXContainerItemProxy */;
+		};
+		0CEC60281EAE40280015A585 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0CEC60061EAE40280015A585 /* ttc-subway-times */;
+			targetProxy = 0CEC60271EAE40280015A585 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0CEC600E1EAE40280015A585 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CEC600F1EAE40280015A585 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0CEC60131EAE40280015A585 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CEC60141EAE40280015A585 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0CEC602D1EAE40280015A585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0CEC602E1EAE40280015A585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0CEC60301EAE40280015A585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ttc-subway-times/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfredchoi.ttc-subway-times";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0CEC60311EAE40280015A585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "ttc-subway-times/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfredchoi.ttc-subway-times";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		0CEC60331EAE40280015A585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ttc-subway-timesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfredchoi.ttc-subway-timesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ttc-subway-times.app/ttc-subway-times";
+			};
+			name = Debug;
+		};
+		0CEC60341EAE40280015A585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "ttc-subway-timesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfredchoi.ttc-subway-timesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ttc-subway-times.app/ttc-subway-times";
+			};
+			name = Release;
+		};
+		0CEC60361EAE40280015A585 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "ttc-subway-timesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfredchoi.ttc-subway-timesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "ttc-subway-times";
+			};
+			name = Debug;
+		};
+		0CEC60371EAE40280015A585 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "ttc-subway-timesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alfredchoi.ttc-subway-timesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "ttc-subway-times";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CEC60021EAE40280015A585 /* Build configuration list for PBXProject "ttc-subway-times" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CEC602D1EAE40280015A585 /* Debug */,
+				0CEC602E1EAE40280015A585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CEC602F1EAE40280015A585 /* Build configuration list for PBXNativeTarget "ttc-subway-times" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CEC60301EAE40280015A585 /* Debug */,
+				0CEC60311EAE40280015A585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0CEC60321EAE40280015A585 /* Build configuration list for PBXNativeTarget "ttc-subway-timesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CEC60331EAE40280015A585 /* Debug */,
+				0CEC60341EAE40280015A585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0CEC60351EAE40280015A585 /* Build configuration list for PBXNativeTarget "ttc-subway-timesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CEC60361EAE40280015A585 /* Debug */,
+				0CEC60371EAE40280015A585 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0CEC5FFF1EAE40280015A585 /* Project object */;
+}
