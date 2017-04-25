@@ -29,7 +29,7 @@ class StationListTableViewController: UITableViewController {
             "searchCriteria": "Bayview Station"
         ]
 
-        HttpService.get(url: url, queryString: queryString) {
+        HttpService.getRequest(url: url, queryString: queryString) {
             json, resposne, error in
             
             guard error == nil else {
@@ -44,8 +44,9 @@ class StationListTableViewController: UITableViewController {
             
             let subwayStations: [String] = json["subwayStations"].arrayValue.map {$0.stringValue}
             self.stations.append(contentsOf: subwayStations)
-            self.tableView.reloadData()
-
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
 

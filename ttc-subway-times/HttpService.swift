@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 
 class HttpService {
-    static func get(url: String, queryString: Dictionary<String, String>, complete: @escaping (JSON?, URLResponse?, Error?) -> Void){
+    static func getRequest(url: String, queryString: Dictionary<String, String>, complete: @escaping (JSON?, URLResponse?, Error?) -> Void){
         var queryStringArray = [String]()
         
         for (key, value) in queryString {

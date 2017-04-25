@@ -9,9 +9,73 @@
 import UIKit
 import SwiftyJSON
 
+class TrainTimeInfo {
+    var direction: String = ""
+    var line: String = ""
+    var description: String = ""
+    var id: Int64 = 0
+    var systemMessageType: String = ""
+    var timeAsFloat: Float = 0
+    var trainId: Int = 0
+    var trainMessage: String = ""
+    var createdDate: String = ""
+    var stationId: String = ""
+    var timeAsString: String = ""
+    
+    init(json: JSON){
+        self.direction = json["trainDirection"].stringValue
+        self.line = json["subwayLine"].stringValue
+        self.description = _parseDescription(description: json["stationDirectionText"].stringValue)
+        self.id = json["id"].int64Value
+        self.systemMessageType = json["systemMessageType"].stringValue
+        self.timeAsFloat = json["timeInt"].floatValue
+        self.trainId = json["trainId"].intValue
+        self.trainMessage = json["trainMessage"].stringValue
+        self.createdDate = json["createDate"].stringValue
+        self.stationId = json["stationId"].stringValue
+        self.timeAsString = json["timeString"].stringValue
+    }
+    
+    private func _parseDescription(description: String) -> String{
+        return description.replacingOccurrences(of: "<br/>", with: "")
+    }
+}
+
+struct TrainInfo{
+    var directionCode: String
+    var directionDescription: String
+    var lineCode: String
+    var times: [TrainTimeInfo]
+    
+    init(direction: [JSON], timesData: [JSON]){
+        times = [TrainTimeInfo]()
+        directionCode = direction[0].stringValue
+        lineCode = direction[2].stringValue
+        directionDescription = ""
+        directionDescription = _parseDescription(description: direction[1].stringValue)
+        
+        for timeData in timesData{
+            let timeObj = TrainTimeInfo (json:timeData)
+            if timeObj.stationId != directionCode {
+                continue
+            }
+            
+            times.append(timeObj)
+        }
+    }
+    
+    private func _parseDescription(description: String) -> String{
+        return description
+            .replacingOccurrences(of: "<br/>", with: "")
+            .replacingOccurrences(of: "</br>", with: "")
+    }
+}
+
 class StationDetailsViewController: UIViewController {
     
     @IBOutlet weak var stackView: UIStackView!
+    
+    var trainTimes = [TrainInfo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,27 +87,17 @@ class StationDetailsViewController: UIViewController {
             "searchCriteria": self.title ?? ""
         ]
         
-        let eastboundLabel = UILabel()
-        stackView.addArrangedSubview(eastboundLabel)
-        eastboundLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
-        eastboundLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
-        eastboundLabel.text  = "Eastbound"
-        eastboundLabel.textAlignment = .center
-        
-        let spacer = UIView()
-        stackView.addArrangedSubview(spacer)
-        spacer.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        
-        let westboundLabel = UILabel()
-        stackView.addArrangedSubview(westboundLabel)
-        westboundLabel.leadingAnchor.constraint(equalTo: stackView.leadingAnchor).isActive = true
-        westboundLabel.trailingAnchor.constraint(equalTo: stackView.trailingAnchor).isActive = true
-        westboundLabel.text  = "Westbound"
-        westboundLabel.textAlignment = .center
-        
-        HttpService.get(url: url, queryString: queryString) {
-            data, resposne, error in
-            //            print(data)
+        HttpService.getRequest(url: url, queryString: queryString) {
+            json, resposne, error in
+            guard let jsonData = json else {
+                return
+            }
+            
+            for direction in jsonData["defaultDirection"].arrayValue {
+                self.trainTimes.append(TrainInfo(direction: direction.arrayValue, timesData: jsonData["ntasData"].arrayValue))
+            }
+            
+            self._setupView()
         }
         
         // Do any additional setup after loading the view.
@@ -64,5 +118,53 @@ class StationDetailsViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    // MARK: private functions
+    
+    private func _setupView(){
+        DispatchQueue.main.async {
+            for info in self.trainTimes {
+                self._insertHeading(heading: info.directionDescription)
+                self._insertSpacer(size: 5)
+                self._insertTimes(trainInfoList: info.times)
+                self._insertSpacer()
+                
+            }
+        }
+    }
+    
+    private func _insertSpacer(size: CGFloat = 20.0){
+        let spacer = UIView()
+        self.stackView.addArrangedSubview(spacer)
+        spacer.heightAnchor.constraint(equalToConstant: size).isActive = true
+    }
+    
+    private func _insertHeading(heading: String){
+        let headingLabel = UILabel()
+        self.stackView.addArrangedSubview(headingLabel)
+        headingLabel.leadingAnchor.constraint(equalTo: self.stackView.leadingAnchor).isActive = true
+        headingLabel.trailingAnchor.constraint(equalTo: self.stackView.trailingAnchor).isActive = true
+        headingLabel.text  = heading
+        headingLabel.font = UIFont(descriptor: headingLabel.font.fontDescriptor, size: 20)
+    }
+    
+    private func _insertTimes(trainInfoList: [TrainTimeInfo]){
+        for trainInfo in trainInfoList {
+            let trainInfoLabel = UILabel()
+            self.stackView.addArrangedSubview(trainInfoLabel)
+            trainInfoLabel.leadingAnchor.constraint(equalTo: self.stackView.leadingAnchor).isActive = true
+            trainInfoLabel.trailingAnchor.constraint(equalTo: self.stackView.trailingAnchor).isActive = true
+            trainInfoLabel.text = self._getTrainArrivalDescription(time: trainInfo.timeAsFloat)
+        }
+    }
+    
+    private func _getTrainArrivalDescription(time: Float) -> String{
+        let parsedTime = Int(floor(time))
+        if (parsedTime == 0){
+            return "Arriving now."
+        }
+        
+        return "Arriving in \(parsedTime) minute\(parsedTime == 1 ? "" : "s")"
+    }
     
 }

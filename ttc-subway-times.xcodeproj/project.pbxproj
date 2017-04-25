@@ -231,15 +231,18 @@
 				TargetAttributes = {
 					0CEC60061EAE40280015A585 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 94D7J98V9G;
 						ProvisioningStyle = Automatic;
 					};
 					0CEC601A1EAE40280015A585 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 94D7J98V9G;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0CEC60061EAE40280015A585;
 					};
 					0CEC60251EAE40280015A585 = {
 						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = 94D7J98V9G;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0CEC60061EAE40280015A585;
 					};
@@ -472,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 94D7J98V9G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -488,6 +492,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 94D7J98V9G;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -505,6 +510,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 94D7J98V9G;
 				INFOPLIST_FILE = "ttc-subway-timesTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alfredchoi.ttc-subway-timesTests";
@@ -519,6 +525,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 94D7J98V9G;
 				INFOPLIST_FILE = "ttc-subway-timesTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alfredchoi.ttc-subway-timesTests";
@@ -532,6 +539,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 94D7J98V9G;
 				INFOPLIST_FILE = "ttc-subway-timesUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alfredchoi.ttc-subway-timesUITests";
@@ -545,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 94D7J98V9G;
 				INFOPLIST_FILE = "ttc-subway-timesUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.alfredchoi.ttc-subway-timesUITests";
@@ -573,6 +582,7 @@
 				0CEC60311EAE40280015A585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CEC60321EAE40280015A585 /* Build configuration list for PBXNativeTarget "ttc-subway-timesTests" */ = {
 			isa = XCConfigurationList;
@@ -581,6 +591,7 @@
 				0CEC60341EAE40280015A585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CEC60351EAE40280015A585 /* Build configuration list for PBXNativeTarget "ttc-subway-timesUITests" */ = {
 			isa = XCConfigurationList;
@@ -589,6 +600,7 @@
 				0CEC60371EAE40280015A585 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
