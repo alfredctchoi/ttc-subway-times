@@ -79,28 +79,8 @@ class StationDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let now = NSDate().timeIntervalSince1970
-        let url = "https://www.ttc.ca/mobile/loadNtas.action"
-        let queryString = [
-            "_": String(now),
-            "searchCriteria": self.title ?? ""
-        ]
-        
-        HttpService.getRequest(url: url, queryString: queryString) {
-            json, resposne, error in
-            guard let jsonData = json else {
-                return
-            }
-            
-            for direction in jsonData["defaultDirection"].arrayValue {
-                self.trainTimes.append(TrainInfo(direction: direction.arrayValue, timesData: jsonData["ntasData"].arrayValue))
-            }
-            
-            self._setupView()
-        }
-        
-        // Do any additional setup after loading the view.
+        self.fetchData()
+        NotificationCenter.default.addObserver(self, selector: #selector(fetchData), name: .UIApplicationDidBecomeActive, object: nil)
     }
     
     override func didReceiveMemoryWarning() {
@@ -121,6 +101,32 @@ class StationDetailsViewController: UIViewController {
     
     // MARK: private functions
     
+    func fetchData() {
+        let now = NSDate().timeIntervalSince1970
+        let url = "https://www.ttc.ca/mobile/loadNtas.action"
+        let queryString = [
+            "_": String(now),
+            "searchCriteria": self.title ?? ""
+        ]
+        
+        self.stackView.subviews.forEach({ $0.removeFromSuperview() })
+        self.trainTimes.removeAll()
+        
+        
+        HttpService.getRequest(url: url, queryString: queryString) {
+            json, resposne, error in
+            guard let jsonData = json else {
+                return
+            }
+            
+            for direction in jsonData["defaultDirection"].arrayValue {
+                self.trainTimes.append(TrainInfo(direction: direction.arrayValue, timesData: jsonData["ntasData"].arrayValue))
+            }
+            
+            self._setupView()
+        }
+    }
+    
     private func _setupView(){
         DispatchQueue.main.async {
             for info in self.trainTimes {
@@ -128,7 +134,6 @@ class StationDetailsViewController: UIViewController {
                 self._insertSpacer(size: 5)
                 self._insertTimes(trainInfoList: info.times)
                 self._insertSpacer()
-                
             }
         }
     }
