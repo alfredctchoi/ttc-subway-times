@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CD69F801EE82A0D00AC72E0 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD69F7E1EE82A0D00AC72E0 /* Fabric.framework */; };
+		0CD69F811EE82A0D00AC72E0 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD69F7F1EE82A0D00AC72E0 /* Crashlytics.framework */; };
 		0CEC600B1EAE40280015A585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CEC600A1EAE40280015A585 /* AppDelegate.swift */; };
 		0CEC60101EAE40280015A585 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC600E1EAE40280015A585 /* Main.storyboard */; };
 		0CEC60121EAE40280015A585 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CEC60111EAE40280015A585 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CD69F7E1EE82A0D00AC72E0 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		0CD69F7F1EE82A0D00AC72E0 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		0CEC60071EAE40280015A585 /* ttc-subway-times.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ttc-subway-times.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CEC600A1EAE40280015A585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CEC600F1EAE40280015A585 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CEC603B1EAE431A0015A585 /* SwiftyJSON.framework in Frameworks */,
+				0CD69F811EE82A0D00AC72E0 /* Crashlytics.framework in Frameworks */,
+				0CD69F801EE82A0D00AC72E0 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +145,8 @@
 		0CEC60381EAE42E90015A585 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0CD69F7E1EE82A0D00AC72E0 /* Fabric.framework */,
+				0CD69F7F1EE82A0D00AC72E0 /* Crashlytics.framework */,
 				0CEC60391EAE42E90015A585 /* SwiftyJSON.framework */,
 			);
 			name = Frameworks;
@@ -173,6 +181,7 @@
 				0CEC60041EAE40280015A585 /* Frameworks */,
 				0CEC60051EAE40280015A585 /* Resources */,
 				0CEC603C1EAE43300015A585 /* ShellScript */,
+				0CD69F7D1EE829CD00AC72E0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -296,6 +305,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0CD69F7D1EE829CD00AC72E0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run 6d0196613fd615b710a92a21523b9ca085fafbfe 45f20a26c6e439ad21d2d946a2c7b945ba14b571c00ddf3e4e9de8ccfac0e297";
+		};
 		0CEC603C1EAE43300015A585 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,6 +502,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "ttc-subway-times/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -502,6 +525,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "ttc-subway-times/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
